@@ -1,7 +1,5 @@
 Tech-Stack Used to build application:
 
-Project structure was generated using mvn archtype:generate and then choosing option wildfly-javaee7-webapp-ear-archetype
-
 Wildfly(JBoss) Application Server - Version 10.1.0.Final
 MySQL Server : 5.6.34-log MySQL Community Server (GPL)
 JAX-WS(Soap) : Apache CXF (Default runtime for wildfly)
@@ -15,11 +13,13 @@ Mockito : Mocking framework
 Maven : for build integration.
 SoapUI : For testing Soap Services.
 
+Project structure was generated using mvn archtype:generate and then choosing option wildfly-javaee7-webapp-ear-archetype
+
 Before build and deployment of the application:
 1) Install & start MySQL database
 2) Create a datasource with jndi name java:/jdbc/mysqlds in wildfly (modify standalone-full.xml to add a data source)
 3) Run the db.sql srcipt present in the sql directory in ebj module
-4) Create queue "queue/paramsQueue3". 
+4) Create JMS queue "queue/paramsQueue3" either using Wildfly Console or from CLI interface. 
 
 Security Considerations:
 
